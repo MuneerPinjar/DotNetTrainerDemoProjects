@@ -8,6 +8,17 @@ namespace DynamicTypeVariableDemo
 {
     class Program
     {
+        private int testvar = 100;
+
+        public static void dynamicMethodDemo(dynamic d1, dynamic d2, dynamic d3) {
+
+            Console.WriteLine("Dynamic values : "+d1+d2+d3);
+            Console.WriteLine();
+            Console.Read();
+        
+        }
+
+
         static void Main(string[] args)
         {
 
@@ -22,7 +33,13 @@ namespace DynamicTypeVariableDemo
             Console.WriteLine("Get the actual type of Value2 : {0}", value2.GetType().ToString());
             Console.WriteLine("Get the actual type of Value3 : {0}", value3.GetType().ToString());
             Console.WriteLine("Get the actual type of Value4 : {0}", value4.GetType().ToString());
+            dynamicMethodDemo(10, 90, 90);
+            dynamicMethodDemo("Hello", "Welcome to Bootcamp Learning",90.56);
             Console.Read();
+        }
+
+        public void SampleTestMethod() {
+            Console.WriteLine(testvar);
         }
     }
 }

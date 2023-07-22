@@ -1,0 +1,10 @@
+1. Write a C# Sharp program to check which number is closest to 100 among two given integers. Return 0 if the two numbers are equal.
+
+Sample Input:
+78, 95
+95, 95
+99, 70
+Expected Output:
+95
+0
+99

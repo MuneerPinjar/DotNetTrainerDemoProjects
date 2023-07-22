@@ -1,0 +1,152 @@
+1. Write a C# Sharp program to check which number is closest to 100 among two given integers. Return 0 if the two numbers are equal.
+
+Sample Input:
+78, 95
+95, 95
+99, 70
+Expected Output:
+95
+0
+99
+
+2. Write a C# Sharp program to check if a specified number is present in a given array of integers.
+
+Sample Input:
+{1,2,9,3}, 3
+{1,2,2,3}, 2
+{1,2,2,3}, 9
+
+Expected Output:
+True
+True
+False
+
+3. Write a C# Sharp program to check whether the sequence of numbers 1, 2, 3 appears in a given array of integers somewhere.
+
+Sample Input:
+{1,1,2,3,1}
+{1,1,2,4,1}
+{1,1,2,1,2,3}
+Expected Output:
+True
+False
+True
+
+
+4. Write a C# Sharp program to check if a given number that is not negative is a multiple of 3 or 7, but not both.
+
+Sample Input:
+3
+7
+21
+Expected Output:
+True
+True
+False
+
+5. Write a C# Sharp program to create a new string using the first two characters of a given string. If the string length is less than 2, return the original string.
+
+Sample Input:
+"Hello"
+"Hi"
+"H"
+" "
+Expected Output:
+He
+Hi
+H
+
+6. Write a C# Sharp program to create a string using the two middle characters of a given string of even length (at least 2).
+
+Sample Input:
+"Hell"
+"JS"
+Expected Output:
+el
+JS
+
+7. Write a C# Sharp program that takes two numbers as input and performs an operation (+,-,*,x,/) on them and displays the result of that operation.
+
+Test Data
+Input first number: 20
+Input operation: -
+Input second number: 12
+Expected Output :
+20 - 12 = 8
+
+8. Write a C# Sharp program that takes two numbers as input and returns true or false when both numbers are even or odd.
+
+9. Write a C# Sharp program that takes a decimal number as input and displays its equivalent in binary form.
+Test Data:
+Number to convert (or "end")? 25
+Expected Output:
+Binary: 11001
+
+
+9. Write a C# Sharp program to read roll no, name and marks of three subjects and calculate the total, percentage and division.
+Test Data :
+Input the Roll Number of the student :784
+Input the Name of the Student :James
+Input the marks of Physics, Chemistry and Computer Application : 70 80 90
+Expected Output :
+Roll No : 784
+Name of Student : James
+Marks in Physics : 70
+Marks in Chemistry : 80
+Marks in Computer Application : 90
+Total Marks = 240
+Percentage = 80.00
+Division = First
+
+10. Write a C# Sharp program to read temperature in centigrade and display a suitable message according to the temperature state below:
+Temp < 0 then Freezing weather
+Temp 0-10 then Very Cold weather
+Temp 10-20 then Cold weather
+Temp 20-30 then Normal in Temp
+Temp 30-40 then Its Hot
+Temp >=40 then Its Very Hot
+Test Data :
+42
+Expected Output :
+Its very hot.
+
+11. Write a C# Sharp program to read any day number as an integer and display the name of the day as a word.
+Test Data :
+4
+Expected Output :
+Thursday
+
+
+12. Write a program in C# Sharp which is a menu-driven program to perform simple calculations.
+
+Test Date and Expected Output
+Enter the first Integer :10
+Enter the second Integer :2
+
+Here are the options :
+1-Addition.
+2-Substraction.
+3-Multiplication.
+4-Division.
+5-Exit.
+
+Input your choice :3
+The Multiplication of 10 and 2 is: 20
+
+13. Write a program in C# Sharp to create a function to check whether a number is prime or not.
+Test Data :
+Input a number : 31
+Expected Output :
+31 is a prime number
+
+14. Write a program in C# Sharp to create a function to input a string and count the number of spaces within the string.
+Test Data :
+Please input a string : This is a test string.
+Expected Output :
+"This is a test string." contains 4 spaces
+
+
+15. Write a C# Sharp program to read the age of a candidate and determine whether it is eligible for casting his/her own vote.
+Test Data : 21
+Expected Output:
+Congratulation! You are eligible for casting your vote.

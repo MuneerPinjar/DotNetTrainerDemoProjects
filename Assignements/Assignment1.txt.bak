@@ -1,0 +1,149 @@
+1. Write a C# Sharp program to compute the sum of the two numerical values. If the two values are the same, return triple their sum.
+
+Sample Input:
+1, 2
+3, 2
+2, 2
+Expected Output:
+3
+5
+12   
+
+
+2. Write a C# Sharp program to get the absolute difference between n and 51. If n is broader than 51 return triple the absolute difference.
+
+Sample Input:
+53
+30
+51
+Expected Output:
+6
+21
+0
+
+3. Write a C# Sharp program to check two given integers, and return true if one of them is 30 or if their sum is 30.
+
+Sample Input:
+30, 0
+25, 5
+20, 30
+20, 25
+Expected Output:
+True
+True
+True
+False
+
+4. Write a C# Sharp program to check a given integer and return true if it is within 10 of 100 or 200.
+
+Sample Input:
+103
+90
+89
+Expected Output:
+True
+True
+False
+
+
+5. Write a C# Sharp program to create a string which is 4 copies of the 2 front characters of a given string. If the given string length is less than 2 return the original string.
+
+Sample Input:
+"C Sharp"
+"JS"
+"a"
+Expected Output:
+C C C C 
+JSJSJSJS
+a
+
+6. Write a C# Sharp program to create a string with the last char added at the front and back of a given string of length 1 or more.
+
+Sample Input:
+"Red"
+"Green"
+"1"
+Expected Output:
+dRedd
+nGreenn
+111
+
+
+7. Write a C# Sharp program to check if a given positive number is a multiple of 3 or 7.
+
+Sample Input:
+3
+14
+12
+37
+Expected Output:
+True
+True
+True
+False
+
+
+8. Write a C# Sharp program to check if a given string contains between 2 and 4 'z' characters.
+
+Sample Input:
+"frizz"
+"zane"
+"Zazz"
+"false"
+"zzzz"
+"ZZZZ"
+Expected Output:
+True
+False
+True
+False
+True
+False
+
+
+9 .Write a C# Sharp program to create a string which is n (non-negative integer) copies of a given string.
+
+Sample Input:
+"JS", 2
+"JS", 3
+"JS", 1
+Expected Output:
+JSJS
+JSJSJS
+
+10.Write a C# Sharp program to count a substring of length 2 that appears in a given string. This substring appears as the last 2 characters of the string. Do not count the end substring.
+
+Sample Input:
+"abcdsab"
+"abcdabab"
+"abcabdabab"
+"abcabd"
+Expected Output:
+1
+2
+3
+0
+
+11. Write a C# Sharp program to create a string of characters at indexes 0,1, 4,5, 8,9 ... from a given string.
+
+Sample Input:
+"Python"
+"JavaScript"
+"HTML"
+Expected Output:
+Pyon
+JaScpt
+HT
+
+12.Write a C# Sharp program to check whether a given string begins with "F" or ends with "B". If the string starts with "F" return "Fizz" and return "Buzz" if it ends with "B" If the string starts with "F" and ends with "B" return "FizzBuzz". In other cases return the original string.
+In other cases return the original string.
+Sample Input:
+"FizzBuzz"
+"Fizz"
+"Buzz"
+"Founder"
+Expected Output:
+Fizz
+Fizz
+Buzz
+Fizz

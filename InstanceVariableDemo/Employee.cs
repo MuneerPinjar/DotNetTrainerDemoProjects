@@ -9,11 +9,18 @@ namespace InstanceVariableDemo
     public class Employee
     {
         //Instance variables
-        // defines at class level
+        // defines at class level, data members
         public int empId;
         public string empName;
         public string empDept;
         public double empSalary;
         public bool empIsTransport;
+
+
+        //Data Funciton
+        public void Display()
+        { 
+        
+        }
     }
 }

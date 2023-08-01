@@ -9,6 +9,7 @@ namespace DataTypesDemo
 
     class Program
     {
+        //Entiry point of execution (Application)
         static void Main(string[] args)
         {
             char a = 'G';

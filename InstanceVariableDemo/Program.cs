@@ -17,7 +17,7 @@ namespace InstanceVariableDemo
             emp1.empName = "Rock";
             emp1.empDept ="Accounts";
             emp1.empIsTransport =true;
-            emp1.empSalary = 12345;
+            emp1.empSalary = 0;
 
             Console.WriteLine("----Employee 1 details----");
             Console.WriteLine("Employee ID : "+emp1.empId);
@@ -47,4 +47,22 @@ namespace InstanceVariableDemo
 
         }
     }
+
+    class SampleTest
+    {
+    
+    }
+
+
+    class SampleTest
+    {
+
+    }
+
+    class SampleTest
+    {
+
+    }
+
+
 }

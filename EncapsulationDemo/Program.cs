@@ -12,6 +12,17 @@ namespace EncapsulationDemo
         static void Main(string[] args)
         {
 
+            DemoEncap demoEncap = new DemoEncap();
+
+            //demoEncap.Title = "Test title data";
+            demoEncap.Description = "Test Description data";
+
+            demoEncap.Display();
+
+
+            string title = demoEncap.Title; 
+
+            Console.ReadLine();
         }
     }
 }

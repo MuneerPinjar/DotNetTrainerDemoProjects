@@ -8,7 +8,7 @@ namespace ConstantVariableDemo
 {
     class Program
     {
-        //Constant variable
+        //use const keyword in order to create Constant variable 
         const int testConstantVarialbe = 100;
 
         //Instance variable

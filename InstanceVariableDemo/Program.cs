@@ -48,21 +48,10 @@ namespace InstanceVariableDemo
         }
     }
 
-    class SampleTest
-    {
-    
-    }
+  
 
 
-    class SampleTest
-    {
-
-    }
-
-    class SampleTest
-    {
-
-    }
+  
 
 
 }

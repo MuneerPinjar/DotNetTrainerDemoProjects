@@ -20,23 +20,30 @@ namespace ReadonlyVariableDemo
         //readonyl variable
         readonly int testReadOnylVariable;
 
-        public Program()
+        //private instance variable
+        private float testFloatPrivateVar = 123.0f;
+
+        public Program(int testdata)
         {
-            this.testReadOnylVariable = 13930;
-            
+            this.testReadOnylVariable = testdata;
+
         }
 
         static void Main(string[] args)
         {
            //create object
 
-            Program obj = new Program();
+            Program obj = new Program(13930);
 
             Console.WriteLine("Intance variable value : " + obj.testDouble);
             Console.WriteLine("Static variable value  : " + Program.max);
             Console.WriteLine("Constant variable value : " + Program.testConstantVarialbe);
 
+
             Console.WriteLine("Readonly variable value : "+obj.testReadOnylVariable);
+
+
+            Program obj2 = new Program(65712356);
 
             Console.Read();
 

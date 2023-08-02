@@ -16,6 +16,7 @@ namespace StaticKeywordDemo
         public static string Description;
         public static int Id;
 
+
         //static constructor 
          static Tutorial()
         {

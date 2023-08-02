@@ -13,9 +13,14 @@ namespace EncapsulationDemo
     {
         //private variables / data members
 
-        private string title;
+        private string title ="";
         private string description;
 
+
+        public DemoEncap()
+        {
+            title = "Some default title";
+        }
 
 
         // using properties we can set or get the private data variables
@@ -26,18 +31,16 @@ namespace EncapsulationDemo
 
             // readonly 
             get
-
             {
-
                 return title;
             }
 
             //write only method
-            set
-            {
-                title = value;
+            //set
+            //{
+            //    title = value;
 
-            }
+            //}
         }
 
 
@@ -46,6 +49,12 @@ namespace EncapsulationDemo
             get { return description; }
 
             set { description = value; }
+        }
+
+        public void Display()
+        {
+            Console.WriteLine("Title : "+this.title);
+            Console.WriteLine("Description  :{0}",this.description);
         }
     }
 

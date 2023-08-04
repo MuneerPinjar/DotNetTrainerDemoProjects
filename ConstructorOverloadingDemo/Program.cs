@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConstructorOverloadingDemo
 {
-    class TechGeek
+   partial class TechGeek
     {
         // private data members
 
@@ -60,6 +60,8 @@ namespace ConstructorOverloadingDemo
             Console.WriteLine("Img : "+img);
         }
 
+        //code here
+
 
     }
 
@@ -69,13 +71,74 @@ namespace ConstructorOverloadingDemo
     {
         static void Main(string[] args)
         {
-            TechGeek techGeek = new TechGeek();
-            techGeek.SetValue(12, 35);
-            techGeek.DisplayValue();
+            //TechGeek techGeek = new TechGeek();
 
+
+            //techGeek.SetValue(12, 35);
+            //techGeek.DisplayValue();
+            //techGeek.DisplayMethodFromParital();
+
+            //// classname RefName;
+            ////RefName = objectName
+
+
+
+            //TechGeek techGeek1;
+
+            //techGeek1 = techGeek;
+
+            //Console.WriteLine("Second object");
+
+            //techGeek1.SetValue(45, 123);
+
+            //Console.WriteLine("Object 1 values ");
+
+            //techGeek.DisplayValue();
+
+
+            //Console.WriteLine("Object 2 values");
+            //techGeek1.DisplayValue();
+
+            //Array of objects
+            // datatype[] variablename = new datatype[10];
+            TechGeek[] techGeeks = new TechGeek[4];
+
+
+
+            for (int i = 0; i < techGeeks.Length; i++)
+            {
+                techGeeks[i] = new TechGeek();
+            }
+
+            for (int i = 0; i < techGeeks.Length; i++)
+            {
+                techGeeks[i].SetValue(i + 1, i + 2);
+                techGeeks[i].DisplayValue();
+            }
 
 
             Console.ReadLine();
+
+            Console.WriteLine("Changes done here");
+            Console.WriteLine("Changes done here");
+            Console.WriteLine("Changes done here");
+            Console.WriteLine("Changes done here");
+            Console.WriteLine("Changes done here");
+
+
+
+
+
+
+            Console.WriteLine("Changes done here");
+            Console.WriteLine("Changes done here");
+            Console.WriteLine("Changes done here");
+            Console.WriteLine("Changes done here");
+            Console.WriteLine("Changes done here");
+
         }
     }
+
+
+    
 }

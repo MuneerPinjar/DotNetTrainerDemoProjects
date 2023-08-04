@@ -101,6 +101,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingApplicationDemo", "B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractionDemo", "AbstractionDemo\AbstractionDemo.csproj", "{84731DCC-90F9-4922-86F7-772FE6FA510B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstructorOverloadingDemo", "ConstructorOverloadingDemo\ConstructorOverloadingDemo.csproj", "{5ED0FC5D-3307-401B-8682-4BD05F4E094F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -303,6 +305,10 @@ Global
 		{84731DCC-90F9-4922-86F7-772FE6FA510B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84731DCC-90F9-4922-86F7-772FE6FA510B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84731DCC-90F9-4922-86F7-772FE6FA510B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ED0FC5D-3307-401B-8682-4BD05F4E094F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ED0FC5D-3307-401B-8682-4BD05F4E094F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ED0FC5D-3307-401B-8682-4BD05F4E094F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ED0FC5D-3307-401B-8682-4BD05F4E094F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

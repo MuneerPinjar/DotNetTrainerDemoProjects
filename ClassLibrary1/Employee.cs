@@ -12,5 +12,8 @@ namespace ClassLibrary1
         public String EmpName { get; set; }
         public string Designation { get; set; }
         public double Salary { get; set; }
+
+        //Code here
+        //Lines here
     }
 }

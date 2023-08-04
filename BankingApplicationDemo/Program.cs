@@ -21,6 +21,11 @@ namespace BankingApplicationDemo
 
 
             Console.WriteLine("Bank Balance : {0}",bankAccount.GetBalance().ToString());
+            Console.WriteLine("Bank Balance : {0}",bankAccount.GetBalance().ToString());
+
+            Console.WriteLine("Bank Balance : {0}",bankAccount.GetBalance().ToString());
+            Console.WriteLine("Bank Balance : {0}",bankAccount.GetBalance().ToString());Console.WriteLine("Bank Balance : {0}",bankAccount.GetBalance().ToString());
+            Console.WriteLine("Bank Balance : {0}",bankAccount.GetBalance().ToString());
         }
     }
 }

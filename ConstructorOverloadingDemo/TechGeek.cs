@@ -9,10 +9,17 @@ namespace ConstructorOverloadingDemo
     public partial class TechGeek
     {
 
+
         public void DisplayMethodFromParital()
         {
             Console.WriteLine("This is Method from partial class");
         }
+
+
+
+        //Ref parameters
+
+       
 
 
 

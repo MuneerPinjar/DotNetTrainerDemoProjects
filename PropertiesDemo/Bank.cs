@@ -33,7 +33,7 @@ namespace PropertiesDemo
                 return bankBalance;
             }
 
-          //  Set only property
+            ////  Set only property
             set
             {
 

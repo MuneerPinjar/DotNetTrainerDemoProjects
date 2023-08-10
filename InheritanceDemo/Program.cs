@@ -11,6 +11,10 @@ namespace InheritanceDemo
         static void Main(string[] args)
         {
             //Single Inheritance
+
+            Animal animal = new Dog();
+
+
             Dog dog = new Dog();
             dog.Eat();
             dog.Bark();

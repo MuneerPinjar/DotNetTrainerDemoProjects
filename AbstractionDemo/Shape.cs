@@ -13,6 +13,11 @@ namespace AbstractionDemo
     {
         //abstract method
         public abstract int area();
+
+
+        public abstract int AreaofCircle();
+
+
     }
 
     public abstract class ActionResult
@@ -70,8 +75,10 @@ namespace AbstractionDemo
             return (side*side);
         }
 
-      
-
+        public override int AreaofCircle()
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public class Circle : Shape
@@ -84,6 +91,11 @@ namespace AbstractionDemo
             _radius = radius;
         }
 
+        public virtual void Display()
+        {
+            Console.WriteLine( "Implementaiton of Circle class");
+        }
+
         public override int area()
         {
             Console.WriteLine("Area of the circle");
@@ -91,6 +103,19 @@ namespace AbstractionDemo
             return Convert.ToInt32((pie * _radius * _radius));
             
 
+        }
+
+        public override int AreaofCircle()
+        {
+            throw new NotImplementedException();
+        }
+
+        public class TestClass123 : Circle
+        {
+            public override void Display()
+            {
+                Console.WriteLine("Implementation of test class");
+            }
         }
     }
 

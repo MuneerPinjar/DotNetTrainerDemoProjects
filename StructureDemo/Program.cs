@@ -18,7 +18,9 @@ Person P1 = new Person();
 
 P1.Name = "Test Name";
 
-P1.Age = 20;
+
+Console.WriteLine("Enter the Age : ");
+P1.Age = Convert.ToInt32( Console.ReadLine());
 P1.Weight = 60;
 P1.Id = 101;
 P1.address.city = "test city";

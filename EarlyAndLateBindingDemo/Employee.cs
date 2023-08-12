@@ -38,6 +38,8 @@ namespace EarlyAndLateBindingDemo
             Console.WriteLine("Default Constructor is called");
         }
 
+        
+
         //parameterized constructor
         public  Employee(int id,int age, string name)
         {
@@ -76,6 +78,12 @@ namespace EarlyAndLateBindingDemo
             this.id = id;
             Console.WriteLine("Myself : "+name);
             Console.WriteLine("Age : "+age);
+        }
+
+        private void DisplayPersonal()
+        {
+
+
         }
     }
 }

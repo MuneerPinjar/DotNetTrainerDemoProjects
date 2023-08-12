@@ -1,5 +1,11 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using IsOperatorDemo;
+using System.Text;
+
+/// <summary>
+/// Is operator is used to check if the run-time tpye of an object is compatible with the given type or not.
+/// It return bool result, True if the given object is of the same type otherwise, return false. It will also return fasle for null objects
+/// </summary>
 
 Console.WriteLine("Is Operator Demo");
 
@@ -11,6 +17,11 @@ Work work = new Work();
 work.TestMethod(10, 101);
 
 bool result;
+
+
+StringBuilder stringbuilder = new StringBuilder();
+
+var res = stringbuilder is Author;
 
 //check whether author object is of Author tpye or not
 //

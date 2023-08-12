@@ -17,7 +17,7 @@ namespace BankingApplicationDemo
 
         public BankAccount(decimal intialBalance)
         {
-            this. = intialBalance;
+            this._balance = intialBalance;
         }
 
         public void Deposit(decimal amount)

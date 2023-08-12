@@ -29,6 +29,11 @@ namespace ParamsKeywordDemo
             return total;
         }
 
+        public static void DisplayDetails(string des=null,int test = 0)
+        {
+
+        }
+
 
 
         public static void DisplayRandomMessage(params object[] messageList) {

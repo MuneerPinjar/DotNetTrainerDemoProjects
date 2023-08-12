@@ -9,13 +9,50 @@ namespace InterfaceDemo
 
     interface ITestInterface1
     {
+        //Only Declarations
         void Display();
         void Display(int test);
         void Display(string test);
-        void Display(string test,int test2);
+        void Display(string test, int test2);
     }
 
-    
+    interface G1
+    {
+
+        //interface method
+        void DisplayDetail();
+    }
+
+    interface G2
+    {
+        void DisplayDetail();
+    }
+
+
+    /// <summary>
+    /// Multiple inheritance
+    /// </summary>
+    public class Tech : G1, G2
+    {
+        void G1.DisplayDetail()
+        {
+            Console.WriteLine("Implemetenation of G1 Detail method");
+        }
+
+        void G2.DisplayDetail()
+        {
+            Console.WriteLine("Implemetenation of G2 Detail method");
+        }
+
+
+        public void SampleMethod()
+        {
+            Console.WriteLine("This is sample method");
+
+        }
+    }
+
+
 
 
 
@@ -42,13 +79,13 @@ namespace InterfaceDemo
         }
     }
 
-  public  interface IEmployeeRepoistory
+    public interface IEmployeeRepoistory
     {
         void Add(Employee emp);
         void Remove(int empId);
         void Update(int empId);
         Employee GetEmployee(int empId);
-        List<Employee> GetAllEmployees();        
+        List<Employee> GetAllEmployees();
     }
 
     public class EmployeeRepository : IEmployeeRepoistory
@@ -82,7 +119,7 @@ namespace InterfaceDemo
 
     public class EmployeeManager : IEmployeeManager
     {
-        public readonly IEmployeeRepoistory _employeeRepoistory;
+        private readonly IEmployeeRepoistory _employeeRepoistory;
 
         //Constructor Injection
         public EmployeeManager(IEmployeeRepoistory employeeRepoistory)
@@ -94,6 +131,16 @@ namespace InterfaceDemo
         {
             _employeeRepoistory.Add(emp);
 
+        }
+
+         void IBaseRepo.Add()
+        {
+            throw new NotImplementedException();
+        }
+
+        void IColRepo.Add()
+        {
+            throw new NotImplementedException();
         }
 
         public List<Employee> GetAllEmployees()
@@ -120,6 +167,10 @@ namespace InterfaceDemo
     interface IVechile
     {
         void ChageGear(int a);
+        /// <summary>
+        /// This method used to spedup the vechile speed
+        /// </summary>
+        /// <param name="a"></param>
         void SpeedUp(int a);
         void ApplyBrakes(int a);
     }
@@ -128,22 +179,50 @@ namespace InterfaceDemo
     {
         public void ApplyBrakes(int a)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Bicycle Appliy brakes : " + a);
         }
 
         public void ChageGear(int a)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Bicycle Change gear : " + a);
         }
 
         public void SpeedUp(int a)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Bicycle speed up : " + a);
         }
     }
 
     class Bike : IVechile
     {
+        public void ApplyBrakes(int a)
+        {
+            Console.WriteLine("Bike Appliy brakes : " + a);
+        }
+
+        public void ChageGear(int a)
+        {
+            Console.WriteLine("Bike Change gear  : " + a);
+        }
+
+        public void SpeedUp(int a)
+        {
+            Console.WriteLine("Bike Speed Up : " + a);
+        }
+    }
+
+    class TestClass1123 : IVechile, IEmployeeManager
+    {
+        public void Add(Employee emp)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Add()
+        {
+            throw new NotImplementedException();
+        }
+
         public void ApplyBrakes(int a)
         {
             throw new NotImplementedException();
@@ -154,7 +233,27 @@ namespace InterfaceDemo
             throw new NotImplementedException();
         }
 
+        public List<Employee> GetAllEmployees()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Employee GetEmployee(int empId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Remove(int empId)
+        {
+            throw new NotImplementedException();
+        }
+
         public void SpeedUp(int a)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(int empId)
         {
             throw new NotImplementedException();
         }
@@ -167,15 +266,78 @@ namespace InterfaceDemo
         static void Main(string[] args)
         {
 
-            IVechile vechile = new Bicycle();
-            IEmployeeRepoistory employeeRepoistory = new EmployeeRepository();
+            Tech tech = new Tech();
 
-            EmployeeManager employeeManager = new EmployeeManager(employeeRepoistory);
+            tech.SampleMethod();
+            
 
-            vechile.ApplyBrakes(1);
+            G1 g1 = new Tech();
+
+            g1.DisplayDetail();
+
+
+            G2 g2 = new Tech();
+
+            g2.DisplayDetail();
+
+            Console.ReadLine();
+
+
+
+
+            //Bicycle bicycle = new Bicycle();
+
+            //Bicycle bicycle1 = new Bicycle();
+
+            //Bike bike = new Bike();
+
+            //// creasting an reference of iterface vechile
+            //IVechile vechile;
+
+            ////assign bicycle obj to interface reference
+            //vechile = bicycle;
+
+
+            //vechile.ChageGear(1);
+            //vechile.SpeedUp(20);
+
+
+            //vechile = bicycle1;
+
+            //vechile.ChageGear(10);
+
+
+            //Console.WriteLine("Vechile interface reference pointing to Bike");
+            //vechile = bike;
+            //vechile.ApplyBrakes(1);
+
+            //vechile.SpeedUp(2);
+
+
+
+
+
+
+
+
+
+            Console.Read();
+
+
+
+
+            //IVechile vechile = new Bicycle();
+            //IEmployeeRepoistory employeeRepoistory = new EmployeeRepository();
+
+            //EmployeeManager employeeManager = new EmployeeManager(employeeRepoistory);
+
+            //vechile.ApplyBrakes(1);
+
+
+
 
             // DIP --> Dependency Injection Principle .. SOLID Principles ( )
-         
+
         }
     }
 }

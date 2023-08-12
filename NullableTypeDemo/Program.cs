@@ -11,9 +11,27 @@ Console.WriteLine("Welcome to Nullable Type Demo");
 
 Nullable<int> testIntVariable = null;
 
+int? result = null;
+
+string? testvariablename;
+
+
+
 string? testString = "Test String";
 
+
+testString = null;
+
+if(testString != null)
+{
+    Console.WriteLine("Default Test string Nullable Variable :" + testString.GetType().ToString());
+}
+else
+{
+    Console.WriteLine("Exception Raised");
+}
+
 Console.WriteLine("Default Test Int Nullable Variable :"+testIntVariable.GetValueOrDefault());
-Console.WriteLine("Default Test string Nullable Variable :" + testString.GetType().ToString());
+
 
 Console.ReadLine();

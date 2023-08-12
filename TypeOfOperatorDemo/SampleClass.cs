@@ -10,5 +10,15 @@ namespace TypeOfOperatorDemo
     {
         //static data member
       public  static Type test = typeof(double);
+
+        static Type testvarialbe = typeof(string);
+
+
+        static int Add(int a,int b, int c, int res)
+        {
+            return a + b + c;
+        }
     }
+
+    
 }

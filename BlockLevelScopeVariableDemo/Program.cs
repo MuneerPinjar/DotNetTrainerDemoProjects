@@ -10,6 +10,8 @@ namespace BlockLevelScopeVariableDemo
     {
         //class level scope starts
 
+        int test;
+
         //Declare a display method
         public void Display()
         {
@@ -33,7 +35,10 @@ namespace BlockLevelScopeVariableDemo
 
         static void Main(string[] args)
         {
-            
+            Program obj = new Program();
+            obj.Display();
         }
+
+        
     }
 }

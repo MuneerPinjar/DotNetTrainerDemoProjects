@@ -6,4 +6,6 @@
         public string EmpName { get; set; }
         public string Designation { get; set; }
         public decimal Salary { get; set; }
+
+    }
 }

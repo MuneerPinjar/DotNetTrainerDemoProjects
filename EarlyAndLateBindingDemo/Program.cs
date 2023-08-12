@@ -5,7 +5,10 @@ Console.WriteLine("Early and Late Binding Demo");
 
 Employee employee1 = new Employee();
 
+
 Employee employee = new Employee(101, 20, "Drake");
+
+
 
 //employee.details("Rock", 30, 101);
 
@@ -20,7 +23,6 @@ dynamic dynamic = 7123.2348 +"This is string";
 
 Console.WriteLine("Dispaly Dynamic objects");
 
-Console.WriteLine(obj.GetType());
 Console.WriteLine(dynamic.GetType());
 
 Console.Read();

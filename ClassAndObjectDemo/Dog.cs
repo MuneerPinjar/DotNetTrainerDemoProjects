@@ -15,6 +15,7 @@ namespace ClassAndObjectDemo
         string color;
         string description;
 
+
         //Constructor to initialize the class
 
         //Defualt construtor

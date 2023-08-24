@@ -127,6 +127,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashSetDemo", "HashSetDemo\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DictonaryDemo", "DictonaryDemo\DictonaryDemo.csproj", "{DAF3273F-CAC3-40BD-9186-A9746BC6AC90}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedListDemo", "LinkedListDemo\LinkedListDemo.csproj", "{E639CD07-998A-485A-8CE1-2E8AC21E8BAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionDemo", "ExceptionDemo\ExceptionDemo.csproj", "{4D4DB8DD-A903-44BA-AADD-E94BA2F3E2C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -381,6 +385,14 @@ Global
 		{DAF3273F-CAC3-40BD-9186-A9746BC6AC90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAF3273F-CAC3-40BD-9186-A9746BC6AC90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAF3273F-CAC3-40BD-9186-A9746BC6AC90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E639CD07-998A-485A-8CE1-2E8AC21E8BAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E639CD07-998A-485A-8CE1-2E8AC21E8BAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E639CD07-998A-485A-8CE1-2E8AC21E8BAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E639CD07-998A-485A-8CE1-2E8AC21E8BAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D4DB8DD-A903-44BA-AADD-E94BA2F3E2C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D4DB8DD-A903-44BA-AADD-E94BA2F3E2C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D4DB8DD-A903-44BA-AADD-E94BA2F3E2C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D4DB8DD-A903-44BA-AADD-E94BA2F3E2C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

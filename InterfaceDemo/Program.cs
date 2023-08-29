@@ -7,13 +7,19 @@ using System.Threading.Tasks;
 namespace InterfaceDemo
 {
 
-    interface ITestInterface1
+    interface ITestInterface1 
     {
+
+        
         //Only Declarations
         void Display();
         void Display(int test);
         void Display(string test);
         void Display(string test, int test2);
+
+         int TestData { get; set; }
+
+
     }
 
     interface G1

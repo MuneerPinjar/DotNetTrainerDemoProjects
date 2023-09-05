@@ -135,6 +135,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileIODemo", "FileIODemo\Fi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIleIOXMLDEMO", "FIleIOXMLDEMO\FIleIOXMLDEMO.csproj", "{1B63F15A-CBAA-428D-8AC6-2BCFB194772E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RDBMNormalization", "RDBMNormalization\RDBMNormalization.csproj", "{FCD7A6D9-91BC-49C6-9A7A-F5F1E1BC6C16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -405,6 +407,10 @@ Global
 		{1B63F15A-CBAA-428D-8AC6-2BCFB194772E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B63F15A-CBAA-428D-8AC6-2BCFB194772E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B63F15A-CBAA-428D-8AC6-2BCFB194772E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCD7A6D9-91BC-49C6-9A7A-F5F1E1BC6C16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCD7A6D9-91BC-49C6-9A7A-F5F1E1BC6C16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCD7A6D9-91BC-49C6-9A7A-F5F1E1BC6C16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCD7A6D9-91BC-49C6-9A7A-F5F1E1BC6C16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,6 +7,7 @@ using System.IO;
 using System.Xml;
 
 
+
 namespace FileIODemo
 {
 
@@ -106,11 +107,14 @@ namespace FileIODemo
 
     internal class Program
     {
-
-
+       
         static void Main(string[] args)
-        {
+        {   
             string path = @"D:\testdata.txt";
+            Action DoSomething = () => Console.WriteLine("Hello world");
+
+            DoSomething();
+
 
             FileStream fileStream = new FileStream(@"D:\newfileUsingFileStream", FileMode.Create, FileAccess.Write, FileShare.None);
             try

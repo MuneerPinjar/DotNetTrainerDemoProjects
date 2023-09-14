@@ -1,6 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using ClassAndObjectDemo;
 
+float te = 10.2f;
+long l = 200;
+Console.WriteLine(te+l) ;
+
 Console.WriteLine("Class and Object Demo");
 
 

@@ -1,0 +1,1605 @@
+﻿
+use bootcampTutDb
+--DQL --> Data Query Langugae
+
+--Syntax 
+-- Select * from table_name
+select * from CUSTOMERS
+
+
+--SELECT * FROM CUSTOMERS
+
+-- SQL CASE INSENSETIVITY
+
+-- Insert Query
+
+-- Syntax 
+
+--INSERT INTO TABLE_NAME (COLUMN 1, COLUMN 2,... COLUMN N)
+--VALUES (value1, value2....valueN);
+
+INSERT INTO CUSTOMERS(ID,NAME,AGE, ADDRESS,SALARY) VALUES
+(1,'Rock',23,'Delhi',2000.00),
+(2,'Leo',23,'Mumbai',2000.00),
+(3,'Drake',23,'Kota',2000.00),
+(4,'John',23,'MP',2000.00),
+(5,'Jay',23,'Kota',2000.00),
+(6,'Ron',23,'Delhi',2000.00),
+(7,'Potter',23,'Delhi',2000.00)
+
+
+-- UPDATE QUERY
+--SYNTAX
+-- UPDATE TABLE_NAME
+-- SET COLUMN1=VALUE1, COULMN2 = VALUE2..... COLUMN N = VALUEN
+--[WHERE CONDITION]
+
+UPDATE CUSTOMERS 
+SET SALARY=9000
+WHERE ID = 2 OR  ID = 6
+
+SELECT * FROM CUSTOMERS
+
+
+--SELECT * FROM CUSTOMOERS WHERE ID =6;
+
+--Delete query
+
+-- syntax
+
+-- DELETE FROM TABLE_NAME WHERE [CONDITION]
+
+--DELETE FROM CUSTOMERS WHERE ID = 4
+
+-- SQL DROP TABLE STATMENT
+
+-- SYNTAX 
+-- DROP TABLE TABLE_NAME;
+
+--DROP TABLE CUSTOMERS
+
+
+-- SQL TRUNCATE TABLE STATMENT
+
+--- THIS IS USED TO DELETE ALL THE DATA FROM THE TABLE NOT THE TABLE ITSELF
+
+-- SYNATX TRUNCATE TABLE TABLE_NAME
+
+--TRUNCATE TABLE CUSTOMERS
+
+--SELECT * FROM CUSTOMERS
+
+
+-- SQL ALTER TABLE STATEMENT
+-- THIS IS USED TO ALTER THE STRUCTURE OF A TABLE
+
+-- SYNTAX
+
+--ALTER TABLE TABLE_NAME {ADD | MODIFY | DROP } COLUMN_NAME {DATA_TYPE}
+
+SELECT * FROM CUSTOMERS
+
+ALTER TABLE CUSTOMERS ADD GENDER CHAR(1);
+
+
+-- ALTER TABLE OLD_TABLE_NAME RENAME TO NEW_TABLE _NAME 
+
+--ALTER TABLE CUSTOMER [RENAME] TO NEW_CUSTOMERS
+
+
+-- SQL DISTINC CLAUSE
+
+--  THIS IS USED TO IDENTITYY THE NON- DUPLICATE DATA FROM A COLUMN
+
+-- SYNTAX
+-- SELECT DISTINCT column1, column2..... columnN from Table_Name
+
+--SELECT * FROM 
+
+--select DISTINCT NAME FROM CUSTOMERS ORDER BY NAME
+
+
+-- SQL WHERE CLAUSE
+
+--SELECT COLUMN1... COLUMNn FROM TABLE_NAME WHERE [CONDITION]
+
+SELECT * FROM CUSTOMERS WHERE SALARY > 2000 AND AGE <25 
+
+-- SQL IN OPERATOR CLAUSE
+-- THIS IS USED TO CHECK WHETHER THE DATA IS PRESENT IN THE COLUMN OR NOT USING WHERE CONDITON 
+
+-- SYNTAX 
+-- SELECT COLUMN1..... COLUMNN
+-- FROM TABLE_NAME
+-- WHERE COLUMN_NAME IN  (VAL-1, VAL-2,.... VAL-N);
+
+SELECT * FROM CUSTOMERS WHERE NAME IN ('ron','leo') and AGE in (23) and ADDRESS IN ('DELHI');
+
+select * from CUSTOMERS
+
+select * from CUSTOMERS  where AGE in (25,23)
+
+-- SQL BETWEEN CLAUSE
+-- THIS IS USED TO RETERIEVE THE VALUES FORM A TABLE THAT FALL IN A CERTAIN RANGE, USING THE WHERE CLAUSE.
+
+-- SYNTAX
+-- SELECT COLUMN1..... COLUMN N
+-- FROM TABLE_NAME
+-- WHERE COLUMN_NAME BETWEEN VAL-1 AND VAL-2
+
+
+SELECT * FROM CUSTOMERS 
+WHERE SALARY BETWEEN 9000 AND 10000
+
+-- SQL LIKE CLAUSE
+
+-- THE LIKE OPERATOR IS USED TO RETRIEVE THE VALUES FROM A TABLE THAT MATCH A CERTAIN PATTERN, USING THE WHERE CLAUSE
+
+-- SYNTAX 
+-- SYNTAX
+-- SELECT COLUMN1..... COLUMN N
+-- FROM TABLE_NAME
+-- WHERE COLUMN_NAME LIKE {PATTERN}
+
+-- These patterns are specified using 'Wildcards'
+
+-- % %
+
+-- %   
+--K%  
+-- _ -- single number or character
+
+-- []  single character within the given range in the []
+
+-- [^] matches any single character excluding the given range in the [^]
+
+
+
+SELECT * FROM CUSTOMERS WHERE SALARY LIKE '200%'
+
+
+SELECT * FROM CUSTOMERS WHERE SALARY LIKE '%200%'
+
+SELECT * FROM CUSTOMERS WHERE SALARY LIKE '_00%'
+
+SELECT * FROM CUSTOMERS WHERE Name LIKE 'K____%'  --
+
+-- where the name has 'm' in the third position
+select * from CUSTOMERS where name like '__m%'
+
+
+
+SELECT * FROM CUSTOMERS WHERE SALARY LIKE '%2'
+
+SELECT * FROM CUSTOMERS WHERE AGE LIKE '2____3'  -- []
+
+select * from CUSTOMERS where ADDRESS like ''
+-- finds any name that starts with A and has the specified alphanets
+
+
+select * from CUSTOMERS where name like '%al%' -- with the name has 'al' in any position
+
+
+select * from CUSTOMERS where name like 'k[h,i,o,m,l,a,n]%';
+
+select * from CUSTOMERS where name like '[b-i]%'; -- name lie anywhere in the range [b-i]
+select * from CUSTOMERS where name like '[^b-k]%';
+
+select * from CUSTOMERS where NAME like 'C%' or Name like '%k'
+
+select * from CUSTOMERS where NAME not like '%k'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--INSERT INTO CUSTOMERS(ID,NAME,AGE, ADDRESS,SALARY) VALUES
+--(14,'Ramesh',32,'Ahmedabad',2000.00);
+--INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
+--VALUES (15, 'Khilan', 25, 'Delhi', 1500.00 );
+
+--INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
+--VALUES (16, 'kaushik', 23, 'Kota', 2000.00 );
+
+--INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
+--VALUES (17, 'Chaitali', 25, 'Mumbai', 6500.00 );
+
+--INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
+--VALUES (18, 'Hardik', 27, 'Bhopal', 8500.00 );
+
+--INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
+--VALUES (19, 'Komal', 22, 'MP', 4500.00 );
+
+--INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
+--VALUES (20, 'Muffy', 24, 'Indore', 10000.00 );
+
+
+--- Order By -- used to sort the data in asc or desc and by default its Asc
+
+-- syntax
+
+-- select * from table_name
+-- where [condition]
+-- order by column1..... columnn [Asc | Desc ];
+
+select * from CUSTOMERS 
+order by NAME desc
+
+-- Sort the results in a preferred order
+
+select * from CUSTOMERS
+order by (Case ADDRESS
+when 'Delhi' then 1
+when 'Bhopal' then 2
+when 'Kota' then 3
+else 100 end) Asc, ADDRESS  desc
+
+
+-- SQL DISTINCT KEYWORD
+
+-- SYNTAX 
+-- SELECT DISTINCT COLUMN1... COLUMNN.. FROM TABLE_NAME
+
+SELECT DISTINCT SALARY FROM CUSTOMERS ORDER BY SALARY DESC
+
+SELECT DISTINCT AGE, SALARY FROM CUSTOMERS ORDER BY AGE
+
+SELECT COUNT( DISTINCT AGE) AS UNIQUEAGE FROM CUSTOMERS
+
+SELECT * from CUSTOMERS
+
+
+update CUSTOMERS set SALARY = null where id in (4,5)
+
+
+select Distinct  salary from customers order by SALARY
+
+-- SQL Group clause
+
+-- Sql group by clause is used in conjunction with the select statement to arrange identical data into groups
+-- typically used with aggregate functions such as SUM(), COUNT(), MAX, AVG, MIN
+
+
+-- Basic syntax
+
+--select columns_name(s) from table_name group by column_name(s)
+
+-- Write a query to group the customers table based on the age and counts the number of records in the each group
+
+23 -->
+
+25-->
+
+18 -->
+
+select * from CUSTOMERS
+select AGE, COUNT(Name) as totalcount from CUSTOMERS group by age
+
+select AGE, MAX(SALARY) AS MAX_SALARY FROM CUSTOMERS GROUP BY AGE
+
+-- CALCULATE THE AVERAGE SALARY OF THE CUSTOMER FROM EACH CITY?
+
+SELECT ADDRESS , AVG(SALARY) AS Average_Salary FROM CUSTOMERS GROUP BY ADDRESS
+
+
+
+-- GROUP BY CLAUSE WIHT MULIPLE COLUMNS
+
+SELECT ADDRESS, AGE, SUM(SALARY) AS TOTAL_SALARY FROM CUSTOMERS GROUP BY ADDRESS, AGE
+
+
+-- GROUP BY CLAUSE WIHT ORDER BY CLAUSE
+-- SYNTAX  select columns_name(s) from table_name group by column_name(s) ORDER BY COLUMN1 [ASC | DESC], COLUMN2 [ASC | DESC]
+
+-- FIND THE HIGHEST SALARY FOR EACH AGE, SORT BY HIGH TO LOW FROM CUSTOMERS
+
+SELECT AGE, MIN(SALARY) AS MIN_SALARY FROM CUSTOMERS GROUP BY AGE ORDER BY MIN_SALARY DESC
+
+
+-- GROUP BY WITH HAVING CLAUSE 
+
+-- SYNTAX  select columns_name(s) from table_name group by column_name(s) HAVING CONDITION
+
+
+
+
+-- SQL HAVING CLAUSE 
+
+-- its similar to where clause
+-- both are used to filter rows in a table based on specified
+-- its used to filter grouped rows instead of single rows
+-- these rows are grouped together by the group by clause
+
+-- Sntax
+--SYNTAX  select columns_name(s) from table_name group by column_name(s) HAVING CONDITION
+
+-- select from where group by having order by
+
+select * from CUSTOMERS
+
+--Grouping the records of the customers table based on the columns Address and Age and filtering the groups where the Age values is less than 25
+
+select ADDRESS, AGE, MIN(salary) as Minimum_Salary  from CUSTOMERS group by ADDRESS, AGE having age>23;
+
+select ADDRESS, AGE, MIN(salary) as Minimum_Salary  from CUSTOMERS group by ADDRESS, AGE;
+
+select * from CUSTOMERS where ADDRESS = 'Calfornia' and age=18
+
+-- Having clause with order by clause
+-- query groups the record of the customers table based on the coulmns Age and Address, filters the groups where the Salary values is less than 5000 and
+-- arranges the remaning groups in descending order based the total salaries of each group
+
+
+SELECT ADDRESS,AGE, SUM(SALARY) AS TT_SAL FROM CUSTOMERS 
+GROUP BY ADDRESS,AGE
+
+
+HAVING sum(salary) <= 5000 ORDER BY TT_SAL DESC;
+
+
+-- HAVING CLAUSE WITH COUNT() FUNCTION
+
+--Query the records of the customers table based on the age column and retrieves the details of the group that has more than 2 entites
+
+
+select AGE, COUNT(age) total_people from CUSTOMERS group by age
+having COUNT(AGE) > 2
+
+select * from CUSTOMERS
+
+-- HAVING CLAUSE WITH AVG() FUNCTION
+
+select ADDRESS, AVG(salary) as Avg_salary from CUSTOMERS 
+group by ADDRESS
+having AVG(salary) >6000
+
+-- HAVING CLAUSE WITH MAX() FUNCTION
+select ADDRESS, max(salary) as MAx_salary from CUSTOMERS 
+group by ADDRESS
+having MAx(salary) >10000
+
+-- SQL TOP CLAUSE
+-- SELECT TOP VALUE COUMN_NAME(S) FROM TABLE_NAME WHERE [CONDITON]
+select TOP 10 * from CUSTOMERS ORDER BY SALARY DESC
+
+-- 100  RECORDS
+SELECT * FROM CUSTOMERS
+SELECT TOP 50 PERCENT * FROM CUSTOMERS ORDER BY SALARY
+
+select TOP 10 * from CUSTOMERS WHERE NAME LIKE 'k%'
+
+-- DELETE TOP(2) FROM CUSTOMERS WHERE NAME LIKE 'k%'
+
+-- TOP AND WITH TIES CLAUSE
+SELECT * FROM CUSTOMERS
+
+SELECT TOP 2 * FROM CUSTOMERS ORDER BY SALARY
+
+
+SELECT TOP 2 WITH TIES * FROM CUSTOMERS  ORDER BY SALARY
+
+UPDATE CUSTOMERS 
+SET AGE = 32 WHERE ID IN (17,18,19,20)
+
+-- THE SQL ANY, ALL OPERATORS
+
+-- COLUMN_NAME OPERATOR ANY (SUBQUERY)
+
+--ANY WITH > OPERATOR
+
+SELECT * FROM CUSTOMERS
+SELECT * FROM CUSTOMERS WHERE SALARY = ANY( SELECT SALARY FROM CUSTOMERS WHERE AGE =32);
+
+-- SQL -ALL OPERATOR
+
+-- ALWAYS RETURNS A BOOL VALUE
+-- IT RETURNS TRUE IF THE GIVEN CONDTION IS SATISFIED FOR ALL THE VALUES IN THE RANGE
+
+-- syntax coumn_name operator ALL (Subquery)
+
+-- ALL with where statment
+
+select * from CUSTOMERS
+
+--q query the cusomters table which returns the details of all the customers whose salary is not equal to the salary of any customer whose age is 25
+select * from customers where Salary <> ALL (select Salary from CUSTOMERS where AGE = 25)
+
+
+-- ALL with Having Statment
+
+Select NAME, AGE, ADDRESS, SALARY from CUSTOMERS
+group by NAME, AGE, ADDRESS, SALARY
+having SALARY > ALL (select AVG(SALARY) from CUSTOMERS)
+
+
+-- SQL Exists operator
+
+-- SYNATX --> where EXISTS (SUBQUERY)
+
+select * from CUSTOMERS
+
+
+CREATE TABLE CARS(
+
+ID INT NOT NULL,
+NAME VARCHAR(20) NOT NULL,
+PRICE INT NOT NULL,
+PRIMARY KEY(ID)
+)
+
+INSERT INTO CARS VALUES (2,'Jeep Compass', 250000);
+INSERT INTO CARS VALUES (3,'Volvo XC90', 250000);
+INSERT INTO CARS VALUES (4,'Roll Royce Phantom', 250000);
+INSERT INTO CARS VALUES (5,'Land Crusiser', 250000);
+
+update CARS 
+set PRICE = 15000 where ID = 5
+
+select * from CARS
+
+--- Using EXISTS operator with Select statement
+ -- Return the list of customers with the price of the car greater than 2000
+select * from CUSTOMERS where exists (select price from CARS where CARS.ID = CUSTOMERS.ID and PRICE > 2000)
+
+--- Using EXISTS operator with Update statement
+
+
+select * from CUSTOMERS where NAME = 'leo'
+
+update CUSTOMERS
+set CUSTOMERS.NAME ='updated customer name 1'
+where exists (select * from cars where CUSTOMERS.ID = CARS.ID)
+
+
+-- DELETE THE ROWS IN THE CUSTOMERS TABLE WHOSE ID IS EQUAL TO THE ID OF THE CARS TABLE HAVING PRICE LESS THAN 1500
+
+DELETE from CUSTOMERS where exists (select price from CARS where CARS.ID = CUSTOMERS.ID and PRICE < 1500)
+
+--- using not operator with exists operator
+
+select * from CUSTOMERS where not exists (select * from CARS where CARS.ID = CUSTOMERS.ID)
+
+-- usage SQL Exists operator
+
+-- checking for the existence of records in a many to many relationship
+
+-- Filtering records based on the existence of related records
+
+
+--Aggregating data based on the existence of related records
+
+-- Optimizing queries
+
+
+--SQL CASE Statement
+
+--synatx
+
+--CASE
+--when condition 1 then statement 1,
+--when condition 2 then statement 2,
+--when condition 3 then statement 3,
+--...... when conditionN then StatementN
+--else result
+--END
+
+
+select * from CUSTOMERS 
+
+
+select *,
+
+Case
+when Age > 30 then 'GEN X'
+when Age > 25 then 'GEN y'
+when age > 22 then 'gen z'
+else 'GEN alpha'
+end as Generation
+from CUSTOMERS
+
+-- query the customers table where we want to provide a 25% increment to each customer if the amount is less than 4500 from the customers table
+
+select *,
+case when salary > 500000 then (salary + salary* 2/100)
+else (SALARY + SALARY * 20/100)
+end as Increment
+from CUSTOMERS
+
+select * from CUSTOMERS
+order by (
+case 
+when ADDRESS like 'k%' then NAME
+else ADDRESS
+end);
+
+
+select * from CUSTOMERS
+order by name
+
+-- SQL Case with GROUP By clause
+
+
+--- Low paid , Avg paid and High paid
+
+select
+CASE 
+	WHEN SALARY <= 4000 THEN 'LOWEST PAID'
+	WHEN SALARY > 4000 AND SALARY <= 6500 THEN 'AVERAGE PAID'
+
+	ELSE 'HIGHEST PAID'
+	END AS SALARY_STATUS,
+	SUM(SALARY) AS TOTAL
+	from CUSTOMERS
+	GROUP BY 
+	CASE
+	WHEN SALARY <= 4000 THEN 'LOWEST PAID'
+	WHEN SALARY > 4000 AND SALARY <= 6500 THEN 'AVERAGE PAID'
+
+	ELSE 'HIGHEST PAID'
+	END
+
+
+	SELECT NAME,
+	CASE 
+	WHEN AGE < 25 THEN 'INTERN'
+	WHEN AGE >= 25 AND AGE <= 27 THEN 'ASSOCIATE ENGINEER'
+	ELSE 'SENIOR DEVELOPER'
+	END AS DESIGNATION
+	
+	FROM CUSTOMERS
+	WHERE SALARY >= 2000
+
+	-- CASE STATEMENT WITH UPDATE STATEMENT 
+
+	UPDATE CUSTOMERS
+	SET SALARY =
+	CASE AGE
+	WHEN 25 THEN 15000
+	WHEN 32 THEN 25000
+	ELSE 12000
+	END
+
+	SELECT * FROM CUSTOMERS
+
+	--CASE WITH INSERT STATEMENT
+
+	DECLARE @AGE INT
+	SET @AGE = 28
+	INSERT INTO CUSTOMERS(ID,NAME, AGE,ADDRESS,SALARY)
+	VALUES(21,'TEST DATA 2', 28,'San Diego',
+	case 
+	when @age >= 25 then 23000
+	else 14000
+	end);
+
+
+	-- Between operator in sql
+
+	--- select column1.... columnN
+	--from table_name
+	--where column_name between value1 and value2;
+
+	CREATE TABLE EMPLOYEE(
+   ID INT NOT NULL, 
+   NAME VARCHAR(15) NOT NULL, 
+   AGE INT NOT NULL, 
+   ADDRESS CHAR(25), 
+   SALARY DECIMAL(10, 2), 
+   JOIN_DATE DATE, 
+   PRIMARY KEY(ID)
+);
+
+INSERT INTO EMPLOYEE(ID, NAME, AGE, ADDRESS, SALARY, JOIN_DATE) VALUES(2, 'Ramesh', 21, 'Hyderabad', 25550.12, '2023/01/02');
+INSERT INTO EMPLOYEE(ID, NAME, AGE, ADDRESS, SALARY, JOIN_DATE) VALUES(1, 'khilan', 22, 'Nijamabad', 57500.84, '2022/01/14');
+INSERT INTO EMPLOYEE(ID, NAME, AGE, ADDRESS, SALARY, JOIN_DATE) VALUES(4, 'Kaushik', 18, 'Bangolore', 47275.43, '2023/03/15');
+INSERT INTO EMPLOYEE(ID, NAME, AGE, ADDRESS, SALARY, JOIN_DATE) VALUES(5, 'chaitali', 23, 'Ranchi', 40700.76, '2022/04/18');
+INSERT INTO EMPLOYEE(ID, NAME, AGE, ADDRESS, SALARY, JOIN_DATE) VALUES(6, 'Hardhik', 19, 'Noida', 44200.09, '2023/06/04');
+INSERT INTO EMPLOYEE(ID, NAME, AGE, ADDRESS, SALARY, JOIN_DATE) VALUES(3, 'komal', 23, 'Chennai', 44200.09, '2023/10/08');
+
+
+select * from EMPLOYEE
+
+select * from EMPLOYEE
+where age between 18 and 22
+
+select * from EMPLOYEE
+where JOIN_DATE between '2023-01-01' and '2023-03-31'
+
+-- Between operator with IN operator
+
+
+--i want to pull the employees who are living in certain locations (x,y,z) and in addition to whose salary of the employee lies in range of (value1 and value 2)
+
+select * from EMPLOYEE
+where SALARY not between 40000 and 45000
+and ADDRESS not in ('Hyderabad','Ranchi','Chennai');
+
+
+-- Between operator with update statement
+select * from CUSTOMERS where AGE between 20 and 25
+
+update CUSTOMERS
+set SALARY = 25000
+where AGE between 20 and 25
+
+-- Between operator with Delete statment
+select * from CUSTOMERS where AGE NOT between 18 and 20
+
+
+--Delete from CUSTOMERS where AGE between 18 and 20
+
+
+-- Union Operator
+
+-- combine data from mulitple tables by elimanting duplicate rows( if any)
+
+-- Syntax
+
+--Select col1...[, Col2]
+--from table1  [, table2]
+
+----where conditon
+--UNION
+----Select col1...[, Col2]
+----from table1  [, table2]
+-- WHERE CONDITION
+
+--UNION ON SINGLE FIELD
+
+
+SELECT * FROM CUSTOMERS
+
+--DELETE FROM CUSTOMERS
+
+insert INTO CUSTOMERS VALUES(1, 'Ramesh', 32, 'Ahmedabad', 2000.00,NULL);
+insert INTO CUSTOMERS VALUES(2, 'Khilan', 25, 'Delhi', 1500.00,NULL);
+insert INTO CUSTOMERS VALUES(3, 'kaushik', 23, 'Kota', 2000.00,NULL);
+insert INTO CUSTOMERS VALUES(4, 'Chaitali', 25, 'Mumbai', 6500.00,NULL);
+insert INTO CUSTOMERS VALUES(5, 'Hardik', 27, 'Bhopal', 8500.00,NULL);
+insert INTO CUSTOMERS VALUES(6, 'Komal', 22, 'MP', 4500.00,NULL);
+insert INTO CUSTOMERS VALUES(7, 'Muffy', 24, 'Indore', 10000.00,NULL);
+
+
+CREATE TABLE ORDERS(
+OID INT NOT NULL,
+DATES DATETIME NOT NULL,
+CUSTOMER_ID INT NOT NULL,
+AMOUNT INT NOT NULL,
+PRIMARY KEY (OID)
+)
+
+
+
+insert INTO ORDERS VALUES(102, '2009-10-08 00:00:00', 3, 3000);
+insert INTO ORDERS VALUES(100, '2009-10-08 00:00:00', 3, 1500);
+insert INTO ORDERS VALUES(101, '2009-11-20 00:00:00', 2, 1560);
+insert INTO ORDERS VALUES(103, '2008-05-20 00:00:00', 4, 2060);
+
+SELECT * FROM ORDERS
+
+SELECT * FROM CUSTOMERS
+
+
+SELECT SALARY FROM CUSTOMERS 
+UNION
+SELECT AMOUNT FROM ORDERS
+
+-- UNION ON MULTIPLE FIELDS
+
+-- JOIN USED TO COMBINE DATA OF TWO TABLES
+
+SELECT ID,NAME,AMOUNT,DATES  FROM CUSTOMERS
+LEFT JOIN ORDERS
+ON CUSTOMERS.ID = ORDERS.CUSTOMER_ID
+
+UNION
+
+SELECT ID,NAME,AMOUNT,DATES  FROM CUSTOMERS
+RIGHT JOIN ORDERS
+ON CUSTOMERS.ID = ORDERS.CUSTOMER_ID
+
+
+-- UNIONT WITH WHERE CLAUSE
+
+-- Retrieve the ids of cusomters from both the table where id is greater than 5 and 2 from Cust and orders table
+
+select id as Newid, salary from CUSTOMERS
+where id > 5
+
+union 
+select CUSTOMER_ID, AMOUNT from ORDERS
+where CUSTOMER_ID > 2
+
+
+-- Union  ALL
+
+
+ CREATE TABLE COURSES_PICKED(
+   STUDENT_ID INT NOT NULL, 
+   STUDENT_NAME VARCHAR(30) NOT NULL, 
+   COURSE_NAME VARCHAR(30) NOT NULL
+);
+
+
+
+INSERT INTO COURSES_PICKED VALUES(1, 'JOHN', 'ENGLISH');
+INSERT INTO COURSES_PICKED VALUES(2, 'ROBERT', 'COMPUTER SCIENCE');
+INSERT INTO COURSES_PICKED VALUES(3, 'SASHA', 'COMMUNICATIONS');
+INSERT INTO COURSES_PICKED VALUES(4, 'JULIAN', 'MATHEMATICS');
+
+
+CREATE TABLE EXTRA_COURSES_PICKED(
+   STUDENT_ID INT NOT NULL, 
+   STUDENT_NAME VARCHAR(30) NOT NULL, 
+   EXTRA_COURSE_NAME VARCHAR(30) NOT NULL
+);
+
+INSERT INTO EXTRA_COURSES_PICKED VALUES(1, 'JOHN', 'PHYSICAL EDUCATION');
+INSERT INTO EXTRA_COURSES_PICKED VALUES(2, 'ROBERT', 'GYM');
+INSERT INTO EXTRA_COURSES_PICKED VALUES(3, 'SASHA', 'FILM');
+INSERT INTO EXTRA_COURSES_PICKED VALUES(4, 'JULIAN', 'MATHEMATICS');
+
+
+
+select * from COURSES_PICKED
+union all
+select * from EXTRA_COURSES_PICKED
+
+
+
+-- SQL Intersect 
+
+create table students(
+
+id int not null,
+Name Varchar(20) not null,
+Hobby varchar(20) not null,
+Age int not null,
+Primary key (ID)
+
+)
+
+
+INSERT INTO STUDENTS(ID, NAME, HOBBY, AGE) VALUES(1, 'Vijay', 'Cricket', 18);
+INSERT INTO STUDENTS(ID, NAME, HOBBY, AGE) VALUES(2, 'Varun', 'Football', 26);
+INSERT INTO STUDENTS(ID, NAME, HOBBY, AGE) VALUES(3, 'Surya', 'Cricket', 19);
+INSERT INTO STUDENTS(ID, NAME, HOBBY, AGE) VALUES(4, 'Karthik', 'Cricket', 25);
+INSERT INTO STUDENTS(ID, NAME, HOBBY, AGE) VALUES(5, 'Sunny', 'Football', 26);
+INSERT INTO STUDENTS(ID, NAME, HOBBY, AGE) VALUES(6, 'Dev', 'Cricket', 23);
+
+select * from students
+
+
+create table Associates(
+
+ID int not null,
+Name Varchar(20) not null,
+Subject varchar(20 ) not null,
+Age int not null,
+Hobby varchar(20) not null,
+primary key (ID)
+
+)
+
+select * from Associates
+
+
+INSERT INTO ASSOCIATES(ID, NAME, SUBJECT, AGE, HOBBY) VALUES(1, 'Naina', 'Maths', 24, 'Cricket');
+INSERT INTO ASSOCIATES(ID, NAME, SUBJECT, AGE, HOBBY) VALUES(2, 'Varun', 'Physics', 26, 'Football');
+INSERT INTO ASSOCIATES(ID, NAME, SUBJECT, AGE, HOBBY) VALUES(3, 'Dev', 'Maths', 23, 'Cricket');
+INSERT INTO ASSOCIATES(ID, NAME, SUBJECT, AGE, HOBBY) VALUES(4, 'Priya', 'Physics', 25, 'Cricket');
+INSERT INTO ASSOCIATES(ID, NAME, SUBJECT, AGE, HOBBY) VALUES(5, 'Aditya', 'Chemistry', 21, 'Cricket');
+INSERT INTO ASSOCIATES(ID, NAME, SUBJECT, AGE, HOBBY) VALUES(6, 'Kalyan', 'Maths', 30, 'Football');
+
+select * from students
+
+select * from Associates
+
+
+select Name, Age, Hobby from students
+where age between 25 and 30
+intersect
+select Name, Age, Hobby from Associates
+where age between 20 and 30
+
+
+
+
+
+select Name, Age, Hobby from students
+where Hobby not in ('Football')
+intersect
+select Name, Age, Hobby from Associates
+where name not like 'v%'
+
+--SQL  Except Operator
+-- Acts as the opposite of SQL union operator
+
+
+
+
+
+--Ado.Net
+--Asp.net MVC CRUD Operations
+--Asp.Net core Rest API CRUD Operations
+--Angular
+
+
+-- SQL using JOINS
+
+--Select Column_name(s)
+--from table_1
+--Join Table_2
+
+-- Inner Join
+
+-- It retrieves the intersection of 2 tables
+
+-- It copares each row of the first table with each row of the second table.
+-- If the paris of these rows match the join predicate, they are joined together.
+-- This is default join
+
+
+--Outer Join
+-- LEFT JOIN, RIGHT JOIN AND FULL JOIN 
+
+SELECT * FROM CUSTOMERS
+
+
+SELECT * FROM ORDERS
+
+
+-- Inner join
+SELECT ID, NAME,AGE, AMOUNT, ORDERS.DATES FROM CUSTOMERS
+inner JOIN ORDERS
+ON CUSTOMERS.ID = ORDERS.CUSTOMER_ID -- Join Predicate
+
+
+
+-- Alternate query
+SELECT ID, NAME,AGE, AMOUNT, ORDERS.DATES FROM CUSTOMERS,ORDERS
+where CUSTOMERS.ID = ORDERS.CUSTOMER_ID -- Join Predicate
+
+-- Inner Join using multiple tables
+
+-- Syntax
+
+--Select coulmn1----coulumnn
+
+--from table1
+--inner join table2
+--on conditon1
+--inner join
+--table3
+--on codition2
+select * from employee
+
+select * from ORDERS
+
+select CUSTOMERS.NAME,CUSTOMERS.AGE, AMOUNT, JOIN_DATE from CUSTOMERS
+inner join ORDERS
+on CUSTOMERS.ID = ORDERS.CUSTOMER_ID
+Inner join EMPLOYEE
+on CUSTOMERS.ID = EMPLOYEE.ID
+where AMOUNT>2000
+
+
+---LEFT Outer JOin
+--Select coulmn1----coulumnn
+
+--from table1
+--left join table2
+--on conditon1
+
+--query to retrieve the details of customers who made an order at the specified datae and who did not?
+
+mobile contacts -- DB 
+Task Managements
+Calendar mamngement
+Inventory management
+
+
+select * from CUSTOMERS
+
+select * from orders
+
+Select id,name, amount, ORDERS.DATES  from CUSTOMERS
+left join ORDERS
+on CUSTOMERS.ID = ORDERS.CUSTOMER_ID
+order by NAME
+
+select * from EMPLOYEE
+--- Joining muliple tables using left outer join
+
+select CUSTOMERS.NAME,CUSTOMERS.AGE, AMOUNT from CUSTOMERS
+left join ORDERS
+on CUSTOMERS.ID = ORDERS.CUSTOMER_ID
+left join EMPLOYEE
+on CUSTOMERS.ID = EMPLOYEE.ID
+where AMOUNT>2000
+order by CUSTOMERS.NAME desc
+
+-- Right Join
+
+
+
+Select CUSTOMERS.ID,CUSTOMERS.NAME, amount, ORDERS.DATES  from CUSTOMERS
+right join ORDERS
+on CUSTOMERS.ID = ORDERS.CUSTOMER_ID
+right join EMPLOYEE
+on CUSTOMERS.ID = EMPLOYEE.ID
+--order by NAME
+
+-- CROSS JOIN
+select * from CUSTOMERS
+select * from ORDERS
+
+select id,name, amount , ORDERS.DATES
+from CUSTOMERS cross join ORDERS
+
+-- FULL Join
+
+select * from CUSTOMERS
+select * from ORDERS
+select * from EMPLOYEE
+
+Select CUSTOMERS.ID,CUSTOMERS.NAME, amount  from CUSTOMERS
+full join ORDERS
+on CUSTOMERS.ID = ORDERS.CUSTOMER_ID
+full join EMPLOYEE
+on CUSTOMERS.ID = EMPLOYEE.ID
+
+-- SELF Join 
+
+-- Its a type of join that combines the records of a table with itselft
+
+--drop table CUSTOMERS
+
+create table customers(
+
+Id int not null,
+Name varchar(20) not null,
+Age int not null,
+Address char (25),
+Salary decimal (18,2),
+Primary key (ID)
+)
+
+INSERT INTO CUSTOMERS VALUES
+(1, 'Ramesh', 32, 'Ahmedabad', 2000.00 ),
+(2, 'Khilan', 25, 'Delhi', 1500.00 ),
+(3, 'Kaushik', 23, 'Kota', 2000.00 ),
+(4, 'Chaitali', 25, 'Mumbai', 6500.00 ),
+(5, 'Hardik', 27, 'Bhopal', 8500.00 ),
+(6, 'Komal', 22, 'MP', 4500.00 ),
+(7, 'Muffy', 24, 'Indore', 10000.00 );
+
+
+select * from CUSTOMERS
+
+-- Basic syntax
+
+-- Select column_name(s)
+--from table1 a, table1 b
+--where a.common_field = b.common_field
+--order by column_name
+
+select a.ID, b.NAME as Earns_Higher, a.NAME as Earn_Less, a.SALARY as Lower_Salary 
+from CUSTOMERS a, CUSTOMERS b
+
+where a.SALARY < b.SALARY
+order by a.SALARY
+
+
+
+-- SQL DELETE JOIN
+
+-- Deletion operation to be performed on multiple tables simultaneosly
+
+--Basic Syntax 
+
+--Delete table(s)
+--from tabel1  join table2
+--on table.common_field = table2.common_field
+
+drop table ORDERS
+
+create table ORDERS(
+OID int not null,
+Date varchar(20) not null,
+Customer_Id int not null,
+Amount decimal (18,2)
+)
+
+select * from ORDERS
+
+select * from CUSTOMERS
+
+
+INSERT INTO ORDERS VALUES 
+(102, '2009-10-08 00:00:00', 3, 3000.00),
+(100, '2009-10-08 00:00:00', 3, 1500.00),
+(101, '2009-11-20 00:00:00', 2, 1560.00),
+(103, '2008-05-20 00:00:00', 4, 2060.00);
+
+select * from CUSTOMERS
+join ORDERS
+on CUSTOMERS.ID = ORDERS.Customer_Id
+
+
+delete a from CUSTOMERS as a inner join ORDERS as b
+
+on a.ID = b.Customer_Id
+
+
+-- SQL UPADATE JOIN
+
+--Is a relationship
+
+--Has a relationship
+
+--syntax 
+
+--update tables(s)
+--set column1= value1, column2= value2 .......
+
+--from table
+--join table2 on table1.join_column = table2.join_column
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- Sql Keys --> Primary Key
+
+-- Foreign Key 
+-- Referencing key of a table cause it can reference any field defined as unique
+
+drop table orders
+
+create table orders(
+Id int not null,
+Date Datetime,
+Customer_ID INT FOREIGN KEY REFERENCES CUSTOMERS(ID),
+AMOUNT DECIMAL,
+PRIMARY KEY (ID)
+)
+
+-- COMPOSITE KEY = SSN + Mobile_No
+
+-- it may or may not be a part of the foreign key
+-- it can not be null
+--can be created by combining more than one canditate key
+-- its also know as compound key
+-- All the attributes in a compound keys are foreign keys
+
+
+-- 
+
+drop table orders
+drop table CUSTOMERS
+
+
+create table customers(
+Id int not null,
+Name varchar (20)  null,
+Age int not null,
+SSN BIGINT,
+MObile_NO BIGINT,
+Address Char(30),
+Salary decimal (18,2),
+constraint CK_Customers Primary key(SSN,MObile_NO)
+)
+
+INSERT INTO customers (ID, NAME, AGE, SSN, MObile_NO,Address,Salary)
+VALUES (3,'Paul', 23,9346363636,298375252,'San Diego',3000)
+
+select * from customers order by id
+
+
+
+--Alternate Key 
+
+
+--Tables Relations
+
+1:1 relationship
+1:Many relationships
+Many :  Many relationships
+
+
+Organisation --> CIT bank
+
+Employee  --> EmpId(PK),Name, Designation, Salary, SSN, EMAIL, Mobile,DepartmentId,BranchId,ManagerId
+
+--1, Rock,SSE,2000,123456789,rock@test.com,123456790,1,1
+--2, Stan Lee,SSE,200000,123456789,stan@test.com,123456790,1,2
+
+
+Manager Table --> ManageId,Name, Description, Gender, Age,DepartmentId,BranchId
+
+
+--EmployeeSkill(Junction table)-->EmpId,SkillId
+
+1,1
+1,2
+1,3
+2,3
+2,2
+
+
+--SkillDescription --> SkillId,SkillName, Description, Version,ReleaseDate,TechStack
+
+
+
+1, .Net,testdescription, 6.0,2022,Microsoft
+2, Angular, testdescritpion, 12, 2020, Google
+3, React, TestDescription, 2,2020, Microsoft
+4................................
+
+
+Many to Many --> Realtionships
+
+
+
+Adress --> AddressId(PK), AddressType, PIN, Address1,Address2,State,City, Country,EmployeeId(FK) 
+
+
+--1, Testdata addresstpe 1, 123455, Testadddress1,testaddress2,teststate, testcity,testcountry, 1
+--2, Testdata addresstpe 2, 123455, Testadddress2,testaddress2,teststate2, testcity2,testcountry2, 1
+
+one to many relationships
+
+EmployeeDetails --> EmpId(PK),PassportNumber, ExpiryDate 
+
+Clientsb-->CLientID, ClientName, ClientType,ClientLocation,
+
+Branche Offices --> 
+
+Departments --> DepartMentId,Name,
+
+Transporation
+
+Security
+
+
+Dept and Emp--> 1: M realtionship
+
+Branch and Emp --> 1: M
+
+Emp : Empdetails --> 1:1 reationship
+
+Emp : Adress --> 1:M
+
+
+Hospital (Main )
+
+--Patient Montitoring System (Sub Module)
+
+Cabins
+
+Beds
+
+Patient
+
+Nurse
+
+
+SOLID Priciples -->  Base
+
+Design Priciples -->
+
+
+SQL -- Stored Procedures
+
+-- Encapsulate a set of sql statements as a single unit
+
+-- Syntax of SP
+
+--CREATE PROCEDURE Procedure_name
+--@parameter1 datatype,
+--@parameter2 datatype
+
+
+--as 
+--Begin
+
+---- SQL statements to be executed
+
+--END
+
+select * from customers
+
+
+--Create procedure GetCustomerInfo
+--@CustomerAge INT
+--as
+--Begin
+	
+--	select * from customers where Age = @CustomerAge
+
+--END
+
+--EXEC GetCustomerInfo @CustomerAge = 24
+
+--Stored Procedure Parameter Types
+
+--Input Parameter --> this are used to pass values from the calling program or user to the sp
+--Output parameter -->
+
+--IO parameter
+
+--Table-Valued Parameters -->this are used to pass a table variable as a parameter to a sp
+
+--Default Parameters
+
+--Cursor parameter --> pass a cursor to a SP
+
+--outXML parametersv--> return xml data from s SP
+
+--Procedure with IN Parameter
+
+
+Create procedure GetCustomerSalaryById
+@CustomerID INT
+as
+Begin
+	
+	select * from customers where Id = @CustomerID
+
+END
+
+
+EXEC GetCustomerSalaryById @CustomerID = 7
+
+--Procedure with out Parameter
+
+--CREATE PROCEDURE GetCustomerSalary
+--@customerId int,
+--@Salary Decimal(18,2) OUT
+
+--AS 
+
+--BEGIN
+
+--   SELECT @Salary =  SALARY FROM customers WHERE ID = @CustomerID
+
+--   END
+
+
+   DECLARE @CustSalary Decimal(18,2) --- Variable 
+
+   EXEC GetCustomerSalary @customerId = 7,@Salary = @CustSalary OUT
+
+
+   Select @CustSalary as 'Customer Salary'
+
+
+   --Procedure with INOUT paramter
+
+
+ --  CREATE PROCEDURE IncreaseSalary
+
+ --  @cust_id int,
+ --  @salary Decimal(18,2) output
+ --  as
+ --  begin
+
+ --  --get the current salary of the customer  
+ --SELECT @Salary =  SALARY FROM customers WHERE ID = @cust_id
+ --
+ -- 100 sql statments bundle up as SP and exec SP
+ --
+
+ ---- increase the salary by 10% -- Setting  the value to variable @Salary by increasing 10%
+ --SET @Salary = @Salary * 1.1;
+
+ ----update the customers salary in the database
+ --Update customers set Salary = @salary where Id = @cust_id
+
+ --End ; 
+
+ 
+
+ DECLARE @cust_id int; declare @salary decimal(18,2);
+
+ set @cust_id = 7;
+ set @salary =  4000
+
+ EXEC IncreaseSalary @cust_id,@salary OUT;
+
+ SELECT @salary AS 'Customer Salary'
+
+ select * from customers where id = 7 
+
+
+ -- how to rename a stored procedure
+
+ --syntax
+
+ sp_rename 'old_sp_name','new_sp_name'
+
+ sp_rename 'IncreaseSalary', 'HikeSalary';
+
+
+ -- How to Modify a SP
+
+ --Syntax
+
+ --ALTER PROCEDURE Procedure_Name
+ --As
+ --Begin
+ ---- New Procedure code goes here
+
+ --END
+
+
+-- ALTER procedure [dbo].[GetCustomerSalaryById]
+--@CustomerID INT,
+--@CustomerName varchar(20)
+--as
+--Begin
+	
+--	select * from customers where Id = @CustomerID and Name = @CustomerName
+
+--END
+
+
+--DROP statement to delete SP
+--syntax
+-- Drop procedure [IF EXISTS]  Procedure_name
+
+--Advantages of SP
+
+-- Improved performance
+
+-- Code reuse
+
+-- Reduced Network traffic
+
+--Better Security
+
+---
+
+
+--SQL Indexes
+
+-- Special lookup tables that are used to speed up the process of data retrieval
+
+--Create Index statement
+
+-- syntax 
+
+-- CREATE INDEX Index_name ON table_name
+
+--Types of Indexes
+-- Unique Index -- not only performance but also for data integrity 
+
+-- Syntax
+
+--CREATE UNIQUE INDEX Index_name on table_name (column_name)
+
+-- Single- Column Index
+
+-- Syntax 
+-- Create Index index_name on table_name(column_name)
+
+-- Composite Indexes
+--Create Index index_name on table_name(column_name1,column_name2)
+
+-- Implict Indexes -- This are created automatically when the object is created for eg, when primary key and unique constraints then this Implict indexes like Unique indexes are created
+
+
+--Explore below topics
+-- When Should indexex be avoided?
+--- SQL Functions (In built function) --Date, string , aggregate, Numeric,Logical functions, Cursor functions, conversion functions, datatype functions, json functions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+select * from sys.tables
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

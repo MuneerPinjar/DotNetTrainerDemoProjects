@@ -25,12 +25,12 @@ namespace ArrayClassDemo
 
             store = new string[10];
             int[] a = new int[10];
-            int[][][] cc = new int[10][2][];
+            //int[][][] cc = new int[10][2][];
             int[][] c = new int[10][];
             int[,,,] d = new int[10, 2, 2, 2];
 
             store[0] = "A";
-            var ababzb = new IComparable();
+            //var ababzb = new IComparable();
             var aasdfadsf = new[] { 0 };
             var aadsgadfhs = new Int32();
 

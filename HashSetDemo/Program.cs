@@ -94,8 +94,8 @@ namespace HashSetDemo
             //    Console.WriteLine(item);
             //}
 
-            Point p;
-            Console.WriteLine(p.S);
+            //Point p;
+            //Console.WriteLine(p.S);
             Console.ReadLine();
           
         }

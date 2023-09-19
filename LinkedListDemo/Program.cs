@@ -19,7 +19,7 @@ namespace LinkedListDemo
             ///6. store duplicates elemenets of the same type.
             ///7. you can remove nodes and reinsert them, either in the same list or in other list, which results in no additional objects allocated on the heap.
 
-            LinkedList<string> linklistObj = new LinkedList<string>()
+            LinkedList<string> linklistObj = new LinkedList<string>();
 
                 int[] vs = new int[10];
 

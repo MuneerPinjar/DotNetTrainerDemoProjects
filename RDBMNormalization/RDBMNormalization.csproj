@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Normalisation.txt" />
+    <Content Include="SqlStatmetnsClassRoom.txt" />
     <Content Include="SqlSyntax.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -64,6 +64,8 @@ namespace InterfaceDemo
 
     class TestClass : ITestInterface1
     {
+        public int TestData { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
         public void Display()
         {
             throw new NotImplementedException();

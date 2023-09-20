@@ -141,6 +141,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADO.NetDemo", "ADO.NetDemo\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegatesDemo2", "DelegatesDemo2\DelegatesDemo2.csproj", "{23714DC2-6A0D-468A-9E74-017C8B7B0420}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNetDemo2", "AdoNetDemo2\AdoNetDemo2.csproj", "{4AD31DF1-61AE-4A87-B75A-C2578080F81A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNetDemo3SP", "AdoNetDemo3SP\AdoNetDemo3SP.csproj", "{D8E94799-18AD-471D-B562-EAEF0203BC40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -423,6 +427,14 @@ Global
 		{23714DC2-6A0D-468A-9E74-017C8B7B0420}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23714DC2-6A0D-468A-9E74-017C8B7B0420}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23714DC2-6A0D-468A-9E74-017C8B7B0420}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AD31DF1-61AE-4A87-B75A-C2578080F81A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AD31DF1-61AE-4A87-B75A-C2578080F81A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AD31DF1-61AE-4A87-B75A-C2578080F81A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AD31DF1-61AE-4A87-B75A-C2578080F81A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8E94799-18AD-471D-B562-EAEF0203BC40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8E94799-18AD-471D-B562-EAEF0203BC40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8E94799-18AD-471D-B562-EAEF0203BC40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8E94799-18AD-471D-B562-EAEF0203BC40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

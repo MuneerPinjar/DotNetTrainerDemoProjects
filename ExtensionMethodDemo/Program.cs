@@ -71,6 +71,8 @@ namespace ExtensionMethodDemo
         {
             Tech tech = new Tech();
 
+            
+
             tech.M5("This is test data");
 
         }

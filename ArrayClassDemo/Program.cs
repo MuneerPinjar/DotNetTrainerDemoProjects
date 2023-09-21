@@ -80,6 +80,8 @@ namespace ArrayClassDemo
 
 
 
+
+
             List<int> list = new List<int>();
 
             List<string> vs = new List<string>();
@@ -122,7 +124,8 @@ namespace ArrayClassDemo
 
 
 
-            //List<T>() -->This constructor is used to create an instance of List<T> class that is empty and has the default intital capacity
+            //List<T>() -->This constructor is used to create an instance of List<T>
+            //class that is empty and has the default intital capacity
 
 
 

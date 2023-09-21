@@ -145,6 +145,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNetDemo2", "AdoNetDemo2\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNetDemo3SP", "AdoNetDemo3SP\AdoNetDemo3SP.csproj", "{D8E94799-18AD-471D-B562-EAEF0203BC40}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LSP", "LSP\LSP.csproj", "{8BDCF499-B71B-492D-BF10-504B8A97FB13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNetDemoWithDataAdapter", "AdoNetDemoWithDataAdapter\AdoNetDemoWithDataAdapter.csproj", "{125588A2-CC12-4027-966E-1AA0271D0519}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -435,6 +439,14 @@ Global
 		{D8E94799-18AD-471D-B562-EAEF0203BC40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8E94799-18AD-471D-B562-EAEF0203BC40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8E94799-18AD-471D-B562-EAEF0203BC40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BDCF499-B71B-492D-BF10-504B8A97FB13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BDCF499-B71B-492D-BF10-504B8A97FB13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BDCF499-B71B-492D-BF10-504B8A97FB13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BDCF499-B71B-492D-BF10-504B8A97FB13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{125588A2-CC12-4027-966E-1AA0271D0519}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{125588A2-CC12-4027-966E-1AA0271D0519}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{125588A2-CC12-4027-966E-1AA0271D0519}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{125588A2-CC12-4027-966E-1AA0271D0519}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -42,8 +42,34 @@ namespace AdoNetDemoWithDataAdapter
             ds.Tables["Products"].Rows.Add(row);
 
             // With the help Sql Adapater will update the source database
-            SqlCommandBuilder builder = new SqlCommandBuilder(sqlDataAdapter);
-            sqlDataAdapter.Update(ds.Tables["Products"]);
+            //SqlCommandBuilder builder = new SqlCommandBuilder(sqlDataAdapter);
+            ////sqlDataAdapter.Update(ds.Tables["Products"]);
+
+            DataView dv = ds.Tables["Products"].DefaultView;
+
+            dv.AllowNew = true;
+
+            DataRowView newRow = dv.AddNew();
+
+            newRow.BeginEdit();
+
+            newRow["Name"] = "Wifi Router";
+            newRow["Price"] = "$100";
+            newRow["Date"] = "26 August 2010";
+
+            newRow.EndEdit();
+
+            ///dataGridView.DataSource = dv;
+            ///dataGridView.DataBind();
+
+
+            dv.AllowDelete = true;
+
+            dv.Table.Rows[2].Delete();
+
+
+
+            
 
             Console.WriteLine("DataSet Saved to Database Successfully");
             

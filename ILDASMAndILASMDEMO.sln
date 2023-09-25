@@ -149,6 +149,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LSP", "LSP\LSP.csproj", "{8
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNetDemoWithDataAdapter", "AdoNetDemoWithDataAdapter\AdoNetDemoWithDataAdapter.csproj", "{125588A2-CC12-4027-966E-1AA0271D0519}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadingDemo", "ThreadingDemo\ThreadingDemo.csproj", "{B92EB83C-F900-40F2-B6D4-F999933E722F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -447,6 +449,10 @@ Global
 		{125588A2-CC12-4027-966E-1AA0271D0519}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{125588A2-CC12-4027-966E-1AA0271D0519}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{125588A2-CC12-4027-966E-1AA0271D0519}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B92EB83C-F900-40F2-B6D4-F999933E722F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B92EB83C-F900-40F2-B6D4-F999933E722F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B92EB83C-F900-40F2-B6D4-F999933E722F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B92EB83C-F900-40F2-B6D4-F999933E722F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
